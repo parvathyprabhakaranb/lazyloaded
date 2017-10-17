@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+
+
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 export class Search {
   
@@ -10,10 +15,20 @@ export class Search {
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
-  constructor() { }
+  dataUrl = 'assets/data/data.json'
+  results;
+  datas:any={};
+  constructor(private http: Http,
+    private httpClient: HttpClient) { }
 
   ngOnInit() {
+     // Make the HTTP request:
+     this.httpClient.get(this.dataUrl).subscribe(res => {
+      console.log(res)
+      this.datas=res;
+      
+      
+    });
   }
   search: Search= {
     

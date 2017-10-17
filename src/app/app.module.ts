@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProjectComponent } from './project/project.component';
 import { AddprojectComponent } from './addproject/addproject.component';
 import { MainComponent } from './main/main.component';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { TimecardComponent } from './timecard/timecard.component';
 
 @NgModule({
@@ -17,7 +19,8 @@ import { TimecardComponent } from './timecard/timecard.component';
     TimecardComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpClientModule,
+    HttpModule,
 
     FormsModule,
     RouterModule.forRoot([

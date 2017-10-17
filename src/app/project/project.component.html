@@ -31,13 +31,22 @@
   <div>
     <table border = "0" width="1300" style="margin-top:1000px;" style bgcolor="white" >
       <tr>
-        <th ><font color="black">NAME</font></th>
-        <th ><font color="black">TYPE</font></th>
-        <th ><font color="black">STATUS</font></th>
-        <th ><font color="black">MANAGER</font></th>
-        <th ><font color="black">DIRECTOR</font></th>
-        <th ><font color="black">ACTION</font></th>
+        <th align="left">NAME</th>
+        <th align="left">TYPE</th>
+        <th align="left">STATUS</th>
+        <th align="left">MANAGER</th>
+        <th align="left">DIRECTOR</th>
+        <th align="left">ACTION</th>
       </tr>
+      <tr *ngFor="let i of datas.data" >
+        
+            <td> {{i.Name}}</td>
+            <td> {{i.Type}} </td>
+            <td> {{i.Status}} </td>
+            <td> {{i.Manager}} </td>
+            <td> {{i.Director}} </td>
+        </tr>
+        
     </table>
   </div>
                                                  
