@@ -6,10 +6,10 @@ import{ RouterModule,Routes} from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: 'timecard', component: TimecardComponent }
+      { path: '', component: TimecardComponent }
    ])
   ],
-  declarations: []
+  declarations: [TimecardComponent]
 })
 export class TimecardModule { 
   
